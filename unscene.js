@@ -1,9 +1,9 @@
-import { GLTFLoader } from '../lib/GLTFLoader.js';
-import { OBJLoader } from '../lib/OBJLoader.js';
-import { GUI } from '../lib/lil-gui.module.min.js';
-import { RenderPass } from '../lib/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from '../lib/postprocessing/UnrealBloomPass.js';
-import { EffectComposer } from '../lib/postprocessing/EffectComposer.js';
+import { GLTFLoader } from './lib/GLTFLoader.js';
+import { OBJLoader } from './lib/OBJLoader.js';
+import { GUI } from './lib/lil-gui.module.min.js';
+import { RenderPass } from './lib/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from './lib/postprocessing/UnrealBloomPass.js';
+import { EffectComposer } from './lib/postprocessing/EffectComposer.js';
 
 let scene, renderer, camera, composer, clock, parties;
 
@@ -295,7 +295,7 @@ function init() {
     // AirPlane
     let airPlane;
 
-    const loader = new GLTFLoader().setPath('../assets/');
+    const loader = new GLTFLoader().setPath('/assets/');
     loader.load('airPlane2.gltf', function (gltf) {
         airPlane = gltf.scene;
         airPlane.rotateY(Math.PI / 2);
@@ -461,7 +461,7 @@ function init() {
 
 
     // texture
-    var texture = new THREE.TextureLoader().load('../assets/smokeD.png');
+    var texture = new THREE.TextureLoader().load('./assets/smokeD.png');
 
 
 
