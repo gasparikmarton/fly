@@ -272,7 +272,7 @@ function init() {
 
     const audioLoader = new THREE.AudioLoader();
     // Load audio file inside asset folder
-    audioLoader.load('../assets/trek.mp3', (buffer) => {
+    audioLoader.load('/assets/trek.mp3', (buffer) => {
         audio.setBuffer(buffer);
         audio.setLoop(false);
         audio.play();  // Start playback
